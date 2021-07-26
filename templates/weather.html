@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<style>
+
+body {
+    background-image: url("https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: #cccccc;
+    text-align: center;
+    color: rgb(15, 193, 206);
+}
+input[type=text] {
+    display: inline;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+}
+input[type=submit] {
+    background-color: rgb(67, 170, 136);
+    color: rgb(255, 255, 255);
+}
+input[type=submit]:hover {
+    background-color: rgb(129, 214, 186);
+}
+.row {
+    margin-left: 25%;
+    column-count: 2;
+    column-gap: 50px;
+}
+.card {
+    opacity: 1;
+    background-color: rgba(180, 181, 184,0);
+    border: transparent;
+}
+</style>
+</head>
+
+<body>
+
+    <h2><i> Delhi Weather Prediction </i></h2>
+
+    <div class="container">
+
+        <form action="/classify" method='post'>
+            
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <h6><b>Min Temperature(°C) </b> </h6>
+                        <input type="text" id="Minimum Temperature" name="Minimum Temperature" value="">   
+                    </div>
+                </div>
+                
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <h6><b> Temperature(°C) </b> </h6>
+                        <input type="text" id="Temperature" name="Temperature" value="">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <h6><b> Heat Index(°C) </b> </h6>
+                        <input type="text" id="Heat Index" name="Heat Index" value="">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <h6><b> Wind Speed(kmph) </b> </h6>
+                        <input type="text" id="Wind Speed" name="Wind Speed" value="">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <h6><b> Wind Direction(°) </b> </h6>
+                        <input type="text" id="Wind Direction" name="Wind Direction" value="">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <h6><b> Visibilty((km) </b> </h6>
+                        <input type="text" id="Visibility" name="Visibility" value="">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <h6><b> Cloud Cover(%) </b> </h6>
+                        <input type="text" id="Cloud Cover" name="Cloud Cover" value="">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <h6><b> Relative Humidity(%) </b> </h6>
+                        <input type="text" id="Relative Humidity" name="Relative Humidity" value="">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <h6><b> Sea Level Pressure(mb) </b> </h6>
+                        <input type="text" id="Sea Level Pressure" name="Sea Level Pressure" value="">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <h6><b> Dew Point(°C) </b> </h6>
+                        <input type="text" id="Dew Point" name="Dew Point" value="">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <br>
+        <br>
+        <h3>{{ prediction_text }}</h3>
+
+        <br>
+        <br>
+    </div>
+</body>
+</html>
