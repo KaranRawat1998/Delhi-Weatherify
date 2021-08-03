@@ -9,7 +9,7 @@ The Main goal of this web app is to predict rainfall efficiently and other weath
  - [Dataset Link](https://www.visualcrossing.com/weather/weather-data-services#/editDataDefinition)
 
 ## Table of Content
-  * [Demo](#Demo)
+  * [Demo](#demo)
   * [Technologies Used](#TechnologiesUsed)
 
 
