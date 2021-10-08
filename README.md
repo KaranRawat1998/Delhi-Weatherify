@@ -16,7 +16,7 @@ The Main goal of this web app is to predict rainfall efficiently and other weath
 ## Demo
 Link: [https://delhiweatherify.herokuapp.com/](https://delhiweatherify.herokuapp.com/)
 
-[![](https://i.imgur.com/MpcJbX1.png)](https://delhiweatherify.herokuapp.com/)
+[![](https://i.imgur.com/Eucvs4s.png)](https://delhiweatherify.herokuapp.com/)
 
 ## Technologies Used
 ![](https://forthebadge.com/images/badges/made-with-python.svg)
