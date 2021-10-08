@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 
 app=Flask(__name__)
-model=pickle.load(open('delhiweathernew.pkl','rb'))
+model=pickle.load(open('delhiweatherify.pkl','rb'))
 scaler = joblib.load('scalernew.save')
 
 @app.route('/')

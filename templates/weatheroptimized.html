@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- BootStrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
 
 <style>
 
@@ -22,24 +20,47 @@ input[type=text] {
     color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
 }
 input[type=submit] {
     background-color: rgb(67, 170, 136);
     color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-left: -20px;
 }
 input[type=submit]:hover {
     background-color: rgb(129, 214, 186);
 }
 .row {
-    margin-left: 25%;
+    display: flex;
+    margin-left: 500px;
     column-count: 2;
     column-gap: 50px;
+    line-height: 1.5;
 }
 .card {
     opacity: 1;
     background-color: rgba(180, 181, 184,0);
     border: transparent;
 }
+
+.card-body-last {
+    margin-left: 145px;
+
+}
+h6 {
+    font-size: 20px;
+    margin-block-end: 0px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 30px;
+}
+
 </style>
 </head>
 
@@ -55,7 +76,7 @@ input[type=submit]:hover {
                 <div class="card">
                     <div class="card-body">
                         <h6><b>Max Temperature(°C) </b> </h6>
-                        <input type="text" id="Maximum Temperature" name="Maximum Temperature" value="">   
+                        <input type="text" id="Maximum Temperature" name="Maximum Temperature" value="{{request.form['Maximum Temperature']}}" required>   
                     </div>
                 </div>
                 
@@ -63,7 +84,7 @@ input[type=submit]:hover {
                 <div class="card">
                     <div class="card-body">
                         <h6><b>Min Temperature(°C) </b> </h6>
-                        <input type="text" id="Minimum Temperature" name="Minimum Temperature" value="">
+                        <input type="text" id="Minimum Temperature" name="Minimum Temperature" value="{{request.form['Minimum Temperature']}}" required>
                     </div>
                 </div>
             </div>
@@ -72,7 +93,7 @@ input[type=submit]:hover {
                 <div class="card">
                     <div class="card-body">
                         <h6><b> Wind Speed(kmph) </b> </h6>
-                        <input type="text" id="Wind Speed" name="Wind Speed" value="">
+                        <input type="text" id="Wind Speed" name="Wind Speed" value="{{request.form['Wind Speed']}}" required>
                     </div>
                 </div>
                 <br>
@@ -80,7 +101,7 @@ input[type=submit]:hover {
                 <div class="card">
                     <div class="card-body">
                         <h6><b> Wind Direction(°) </b> </h6>
-                        <input type="text" id="Wind Direction" name="Wind Direction" value="">
+                        <input type="text" id="Wind Direction" name="Wind Direction" value="{{request.form['Wind Direction']}}" required>
                     </div>
                 </div>
             </div>
@@ -89,7 +110,7 @@ input[type=submit]:hover {
                 <div class="card">
                     <div class="card-body">
                         <h6><b> Visibilty((km) </b> </h6>
-                        <input type="text" id="Visibility" name="Visibility" value="">
+                        <input type="text" id="Visibility" name="Visibility" value="{{request.form['Visibility']}}" required>
                     </div>
                 </div>
                 <br>
@@ -97,7 +118,7 @@ input[type=submit]:hover {
                 <div class="card">
                     <div class="card-body">
                         <h6><b> Cloud Cover(%) </b> </h6>
-                        <input type="text" id="Cloud Cover" name="Cloud Cover" value="">
+                        <input type="text" id="Cloud Cover" name="Cloud Cover" value="{{request.form['Cloud Cover']}}" required>
                     </div>
                 </div>
             </div>
@@ -106,7 +127,7 @@ input[type=submit]:hover {
                 <div class="card">
                     <div class="card-body">
                         <h6><b> Relative Humidity(%) </b> </h6>
-                        <input type="text" id="Relative Humidity" name="Relative Humidity" value="">
+                        <input type="text" id="Relative Humidity" name="Relative Humidity" value="{{request.form['Relative Humidity']}}" required>
                     </div>
                 </div>
                 <br>
@@ -114,16 +135,16 @@ input[type=submit]:hover {
                 <div class="card">
                     <div class="card-body">
                         <h6><b> Sea Level Pressure(mb) </b> </h6>
-                        <input type="text" id="Sea Level Pressure" name="Sea Level Pressure" value="">
+                        <input type="text" id="Sea Level Pressure" name="Sea Level Pressure" value="{{request.form['Sea Level Pressure']}}" required>
                     </div>
                 </div>
             </div>
             <br>
             <div class="row">
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-body-last">
                         <h6><b> Dew Point(°C) </b> </h6>
-                        <input type="text" id="Dew Point" name="Dew Point" value="">
+                        <input type="text" id="Dew Point" name="Dew Point" value="{{request.form['Dew Point']}}" required>
                     </div>
                 </div>
             </div>
